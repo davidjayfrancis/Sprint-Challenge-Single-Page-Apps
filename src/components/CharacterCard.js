@@ -1,10 +1,12 @@
 import React from "react";
-import jssPluginPropsSort from "jss-plugin-props-sort";
+import CharacterList from "./CharacterList.js";
+// import jssPluginPropsSort from "jss-plugin-props-sort";
 
 export default function CharacterCard(props) {
   return (
     <div>
-      <h2>Name: {props.name}</h2>
+      <h3>Name: {props.name}</h3>
+      <p>Species: {props.species}</p>
     </div>
   );
 }

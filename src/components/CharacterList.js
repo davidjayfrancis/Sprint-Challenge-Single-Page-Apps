@@ -27,6 +27,11 @@ export default function CharacterList() {
     <div>
       <section className="character-list">
         <h2>Ricky and Morty Characters</h2>
+        {people.map(character => {
+          return (
+            <CharacterCard name={character.name} species={character.species} />
+          );
+        })}
       </section>
     </div>
   );
