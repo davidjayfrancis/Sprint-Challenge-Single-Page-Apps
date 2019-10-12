@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard.js";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+`;
+
+const Title = styled.h3`
+  text-align: center;
+`;
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -26,12 +37,17 @@ export default function CharacterList() {
   return (
     <div>
       <section className="character-list">
-        <h2>Ricky and Morty Characters</h2>
-        {people.map(character => {
-          return (
-            <CharacterCard name={character.name} species={character.species} />
-          );
-        })}
+        <Title>Ricky and Morty Characters</Title>
+        <Container>
+          {people.map(character => {
+            return (
+              <CharacterCard
+                name={character.name}
+                species={character.species}
+              />
+            );
+          })}
+        </Container>
       </section>
     </div>
   );
