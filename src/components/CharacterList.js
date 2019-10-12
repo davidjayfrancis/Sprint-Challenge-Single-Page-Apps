@@ -56,6 +56,7 @@ export default function CharacterList() {
               <CharacterCard
                 name={character.name}
                 species={character.species}
+                image={character.image}
               />
             );
           })}

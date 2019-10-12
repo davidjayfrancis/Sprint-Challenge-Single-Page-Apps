@@ -16,6 +16,7 @@ export default function CharacterCard(props) {
     <Card>
       <h3>Name: {props.name}</h3>
       <p>Species: {props.species}</p>
+      <img src={props.image} />
     </Card>
   );
 }
